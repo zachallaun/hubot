@@ -44,4 +44,4 @@ module.exports = (robot) ->
 
   robot.enter (response) ->
     if (messages = robot.brain.data.messages[response.message.user.name])
-      msg.send "Hey #{response.message.user.name}, I have some messages for you."
+      response.send "Hey #{response.message.user.name}, I have some messages for you."
