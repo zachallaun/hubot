@@ -15,7 +15,7 @@
 
 addMessage = (data, to, from, message) ->
   if data[to.name]
-    data[to.name].push message
+    data[to.name].push [from.name, message]
   else
     data[to.name] = [[from.name, message]]
 
