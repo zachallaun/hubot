@@ -28,7 +28,7 @@ module.exports = (robot) ->
     if users.length is 1
       user = users[0]
       addMessage(robot.brain.data.messages, user, msg.message.user, msg.match[2])
-      msg.send "I'll let them know."
+      msg.send "I'll let 'em know."
     else if users.length > 1
       msg.send "Too many users could have that name!"
     else
@@ -36,8 +36,7 @@ module.exports = (robot) ->
 
   robot.respond /messages\?/i, (msg) ->
     if (messages = robot.brain.data.messages[msg.message.user.name])
-      for message in messages
-        msg.send "#{message[0]}: #{message[1]}"
+      msg.send "from #{messg[0]}: #{messg[1]}" for messg in messages
       delete robot.brain.data.messages[msg.message.user.name]
     else
       msg.send "I've got nothin' for ya."
