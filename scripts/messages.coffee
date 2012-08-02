@@ -1,5 +1,5 @@
 # Description:
-#   Hubot support for leaving messages for users.
+#   Hubot support for leaving messages for users. Heavily based on ambush.coffee.
 #
 # Dependencies:
 #   None
@@ -8,7 +8,8 @@
 #   None
 #
 # Commands:
-#   TBA
+#   hubot message for <user>: <message>
+#   hubot messages?
 #
 # Author:
 #   zachallaun
